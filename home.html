@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - TECHTONIC SHOES STORE</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* Your existing CSS styles */
+
+        /* Keyframe animation for heart droplet */
+        @keyframes heartDroplet {
+            0% {
+                transform: translateY(-50px) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100px) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        /* Styling for heart droplet */
+        .heart-droplet {
+            position: fixed;
+            font-size: 20px; /* Adjust the size of the heart */
+            color: #ff0000; /* Color of the heart */
+            animation: heartDroplet 2s ease-out infinite;
+            z-index: 9999; /* Ensure it's above other content */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to TECHTONIC SHOES STORE</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing high-quality shoes for every occasion. Our shoes are designed with comfort, style, and durability in mind
+            THIS website is developed by MUAZ AND Fitsum.</p>
+        <h2>Our Brand shoes</h2>
+        <div class="brand-images">
+            <img src="aaa.jpg" alt="Brand shoes">
+            <img src="aaaaaa.jpg" alt="Brand shoes">
+            <img src="aaaaaaaaa.jpg" alt="Brand shoes">
+            <img src="jordan1.jpg" alt="Brand shoes">
+            <img src="htgrht.jpg" alt="Brand shoes">
+            <img src="bdbede48ea20769a65d329725c410105.jpg" alt="Brand shoes">
+            <!-- Add more brand images as needed -->
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>Contact us: info@techtonicshoes.com</p>
+    </footer>
+
+    <!-- JavaScript to create 100 heart droplets -->
+    <script>
+        // Function to create heart droplets
+        function createHeartDroplets() {
+            const numDroplets = 100; // Number of droplets to create
+
+            // Loop to create droplets
+            for (let i = 0; i < numDroplets; i++) {
+                // Create div element for droplet
+                const droplet = document.createElement('div');
+                droplet.classList.add('heart-droplet');
+                droplet.innerHTML = '❤️'; // Unicode heart character
+
+                // Randomize position within the window
+                droplet.style.left = Math.random() * window.innerWidth + 'px';
+                droplet.style.top = Math.random() * window.innerHeight + 'px';
+
+                // Append droplet to document body
+                document.body.appendChild(droplet);
+            }
+        }
+
+        // Call the function to create heart droplets when the page loads
+        window.onload = createHeartDroplets;
+    </script>
+</body>
+</html>
